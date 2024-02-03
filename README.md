@@ -104,7 +104,7 @@ Application
       * Or research your own options for contacting the Accountabilibuddy.
           
           * Just make sure your selection allows for the Buddy to opt out of communications with your app by responding to your notification.
-          * Their response will make a DELETE to '/api/user/buddy'
+          * Their response will make a DELETE to '/api/user/buddy/:id' where the id parameter represents the User id.
     
     For convinience, modify the package.json file to include useful scripts:
     ```
@@ -163,7 +163,7 @@ Application
 
     * <b>PUT /api/user/buddy</b> - Has a request body representing User-shaped form data sent by client. Should use the session object to identify which User to modify. Response should redirect to '/'.
 
-    * <b>DELETE /api/user/buddy</b> - Should use the session object to identify which User to modify. Response should redirect to '/'.
+    * <b>DELETE /api/user/buddy/:id</b> - Should use the request parameter id to identify which User to modify. Response should redirect to '/'.
 
   #### Handlebars Routes
 
